@@ -43,13 +43,6 @@ The website helps highlight:
 4. Contact
 5. Footer
 
-## Personal Details Displayed
-- Name: Ahmed Abdullah
-- Role: Frontend Developer
-- Email: AhmedAbdullah392392@gmail.com
-- Phone: +92 3288637922
-- Location: Wah, Pakistan
-
 ## Project Status
 This portfolio is currently a frontend showcase project and is suitable for personal branding and career presentation.
 

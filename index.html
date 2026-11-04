@@ -4,7 +4,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Ahmed Abdullah - Developer & Designer</title>
+    <meta name="description" content="Ahmed Abdullah - University student building AI-powered tools and web applications. Explore my projects in web development, AI, and software engineering." />
+    <meta name="author" content="Ahmed Abdullah" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ahmed Abdullah - Developer & Designer" />
+    <meta property="og:description" content="University student building AI-powered tools and web applications." />
+    <meta property="og:url" content="https://yourusername.github.io/Portfolio/" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+    
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -23,10 +35,10 @@
         <span class="logo-text">DevPortfolio</span>
       </div>
       <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
 
@@ -37,190 +49,103 @@
       <div class="hero-left fade-in">
         <p class="hero-greeting">Hello, I'm</p>
         <h1 class="hero-name">Ahmed Abdullah</h1>
-        <p class="hero-title">Frontend Developer</p>
+        <p class="hero-title">Developer building AI-powered tools</p>
         <p class="hero-bio">
-          Beginner Frontend Developer with a builder's mindset.
-          I learn by doing — every project teaches me something 
-          new and brings me one step closer to my goals.
+          University student passionate about creating innovative solutions 
+          through AI and web development. I learn by doing — every project 
+          teaches me something new and brings me closer to building impactful technology.
         </p>
         <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="Ahmed_Abdullah_CV.pdf" download class="btn btn-secondary">Download CV</a>
+          <a href="#projects" class="btn btn-primary hero-projects-btn">View Projects</a>
         </div>
         <div class="hero-socials">
-          <a href="https://github.com/yourusername" target="_blank" class="social-icon">
+          <a href="https://github.com/AhmedAbdullah001" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
           <i class="fab fa-github"></i>
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon">
+          <a href="https://www.linkedin.com/in/ahmed-abdullah-0693612bb" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
           </a>
-          <a href="mailto:AhmedAbdullah392392@gmail.com" class="social-icon">
+          <a href="mailto:AhmedAbdullah392392@gmail.com" class="social-icon" aria-label="Email">
           <i class="fas fa-envelope"></i>
           </a>
         </div>
       </div>
       <div class="hero-right fade-in">
   <div class="photo-circle">
-    <img src="photo.jpg" alt="Ahmed Abdullah" />
+    <img src="photo.jpg" alt="Ahmed Abdullah - Developer" />
   </div>
 </div>
     </section>
 
     <!-- ========================
-         SKILLS SECTION
+         ABOUT SECTION
     ========================= -->
-    <section class="skills" id="skills">
-      <h2 class="section-title">Skills & Expertise</h2>
-      <p class="section-subtitle">Technologies I work with to bring ideas to life</p>
-      <div class="skills-grid">
-
-        <div class="skill-card fade-in">
-          <div class="skill-icon" style="background: linear-gradient(135deg, #f97316, #ef4444);">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="skill-info">
-            <span class="skill-name">HTML</span>
-            <span class="skill-percent">80%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="80%"
-              style="width: 0%; background: linear-gradient(90deg, #f97316, #ef4444);">
+    <section class="about" id="about">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">Who I am and what drives me</p>
+      
+      <div class="about-content fade-in">
+        <div class="about-text">
+          <h3 class="about-heading">University Student & Developer</h3>
+          <p class="about-bio">
+            I'm Ahmed Abdullah, a Computer Science student at COMSATS University Islamabad, Wah Campus. 
+            I'm passionate about leveraging technology to solve real-world problems, with a particular 
+            focus on AI-powered applications and web development.
+          </p>
+          <p class="about-bio">
+            My journey in software development started with a curiosity about how things work behind the 
+            scenes. Today, I'm building projects that combine machine learning, web technologies, and 
+            intuitive design to create meaningful user experiences.
+          </p>
+          
+          <div class="education-card">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-info">
+              <h4>Bachelor's in Computer Science</h4>
+              <p>COMSATS University Islamabad - Wah Campus</p>
+              <p class="education-year">Expected 2028</p>
             </div>
           </div>
-          <span class="skill-badge">Advanced</span>
         </div>
-
-        <div class="skill-card fade-in">
-          <div class="skill-icon" style="background: linear-gradient(135deg, #a301f46f, #9c01f66c);">
-            <i class="fas fa-palette"></i>
-          </div>
-          <div class="skill-info">
-            <span class="skill-name">CSS</span>
-            <span class="skill-percent">70%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="70%"
-              style="width: 0%; background: linear-gradient(90deg, #06b6d4, #3b82f6);">
+        
+        <div class="about-skills">
+          <div class="skill-group">
+            <h4 class="skill-group-title">
+              <i class="fas fa-laptop-code"></i> Frontend Development
+            </h4>
+            <div class="skill-chips">
+              <span class="skill-chip">HTML</span>
+              <span class="skill-chip">CSS</span>
+              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">Responsive Design</span>
             </div>
           </div>
-          <span class="skill-badge">Intermediate</span>
-        </div>
-
-        <div class="skill-card fade-in">
-          <div class="skill-icon" style="background: linear-gradient(135deg, #f59e0b, #f97316);">
-            <i class="fas fa-bolt"></i>
-          </div>
-          <div class="skill-info">
-            <span class="skill-name">JavaScript</span>
-            <span class="skill-percent">60%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="60%"
-              style="width: 0%; background: linear-gradient(90deg, #f59e0b, #f97316);">
+          
+          <div class="skill-group">
+            <h4 class="skill-group-title">
+              <i class="fas fa-code"></i> Programming Languages
+            </h4>
+            <div class="skill-chips">
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">Java</span>
+              <span class="skill-chip">C++</span>
             </div>
           </div>
-          <span class="skill-badge">Intermediate</span>
-        </div>
-
-        <!-- C++ -->
-<div class="skill-card fade-in">
-  <div class="skill-icon" style="background: linear-gradient(135deg, #0047AB, #0066CC);">
-    <i class="fas fa-code"></i>
-  </div>
-  <div class="skill-info">
-    <span class="skill-name">C++</span>
-    <span class="skill-percent">60%</span>
-  </div>
-  <div class="skill-bar">
-    <div class="skill-fill" data-width="60%"
-      style="width: 0%; background: linear-gradient(90deg, #0047AB, #0066CC);">
-    </div>
-  </div>
-  <span class="skill-badge">Intermediate</span>
-</div>
-
-<!-- Python -->
-<div class="skill-card fade-in">
-  <div class="skill-icon" style="background: linear-gradient(135deg, #3776AB, #FFD43B);">
-    <i class="fab fa-python"></i>
-  </div>
-  <div class="skill-info">
-    <span class="skill-name">Python</span>
-    <span class="skill-percent">65%</span>
-  </div>
-  <div class="skill-bar">
-    <div class="skill-fill" data-width="65%"
-      style="width: 0%; background: linear-gradient(90deg, #3776AB, #FFD43B);">
-    </div>
-  </div>
-  <span class="skill-badge">Intermediate</span>
-</div>
-
-<!-- Java -->
-<div class="skill-card fade-in">
-  <div class="skill-icon" style="background: linear-gradient(135deg, #E76F00, #5382A1);">
-    <i class="fab fa-java"></i>
-  </div>
-  <div class="skill-info">
-    <span class="skill-name">Java</span>
-    <span class="skill-percent">60%</span>
-  </div>
-  <div class="skill-bar">
-    <div class="skill-fill" data-width="60%"
-      style="width: 0%; background: linear-gradient(90deg, #E76F00, #5382A1);">
-    </div>
-  </div>
-  <span class="skill-badge">Intermediate</span>
-</div>
-
-        <div class="skill-card fade-in">
-          <div class="skill-icon" style="background: linear-gradient(135deg, #06b6d4, #8b5cf6);">
-            <i class="fas fa-globe"></i>
-          </div>
-          <div class="skill-info">
-            <span class="skill-name">Responsive Design</span>
-            <span class="skill-percent">72%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="72%"
-              style="width: 0%; background: linear-gradient(90deg, #06b6d4, #8b5cf6);">
+          
+          <div class="skill-group">
+            <h4 class="skill-group-title">
+              <i class="fas fa-tools"></i> Tools & Technologies
+            </h4>
+            <div class="skill-chips">
+              <span class="skill-chip">Git & GitHub</span>
+              <span class="skill-chip">OpenAI API</span>
+              <span class="skill-chip">UI Design</span>
+              <span class="skill-chip">Figma</span>
             </div>
           </div>
-          <span class="skill-badge">Intermediate</span>
         </div>
-
-        <div class="skill-card fade-in">
-          <div class="skill-icon" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
-            <i class="fab fa-github"></i>
-          </div>
-          <div class="skill-info">
-            <span class="skill-name">Git & GitHub</span>
-            <span class="skill-percent">70%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="70%"
-              style="width: 0%; background: linear-gradient(90deg, #8b5cf6, #ec4899);">
-            </div>
-          </div>
-          <span class="skill-badge">Intermediate</span>
-        </div>
-
-        <div class="skill-card fade-in">
-          <div class="skill-icon" style="background: linear-gradient(135deg, #10b981, #06b6d4);">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <div class="skill-info">
-            <span class="skill-name">UI Design</span>
-            <span class="skill-percent">60%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="60%"
-              style="width: 0%; background: linear-gradient(90deg, #10b981, #06b6d4);">
-            </div>
-          </div>
-          <span class="skill-badge">Intermediate</span>
-        </div>
-
       </div>
     </section>
 
@@ -234,133 +159,200 @@
 
         <div class="project-card fade-in">
           <div class="project-image">
-            <img src="task-manager.png" alt="Task Manager App" />
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Task Manager App</h3>
-            <p class="project-desc">
-              A full-featured task manager with drag and drop,
-              priority levels, dark mode and localStorage.
-            </p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <div class="project-buttons">
-              <a href="#" class="btn btn-primary">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="#" class="btn btn-secondary">
-                <i class="fab fa-github"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card fade-in">
-          <div class="project-image">
-            <img src="weather-app.png" alt="Weather App" />
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Weather App</h3>
-            <p class="project-desc">
-              Real-time weather app using OpenWeatherMap API
-              with 5-day forecast, dark mode and geolocation.
-            </p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">API</span>
-            </div>
-            <div class="project-buttons">
-              <a href="#" class="btn btn-primary">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="#" class="btn btn-secondary">
-                <i class="fab fa-github"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card fade-in">
-          <div class="project-image">
-             <img src="Bank.png" alt="Bank App" />
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Bank Management System</h3>
-            <p class="project-desc">
-               Java Swing desktop app for bank account and transaction management with secure staff login.</p>
-            <div class="project-tags">
-              <span class="tag">Java</span>
-              <span class="tag">OOP</span>
-              <span class="tag">Console App</span>
-            </div>
-            <div class="project-buttons">
-              <a href="#" class="btn btn-primary">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="#" class="btn btn-secondary">
-                <i class="fab fa-github"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card fade-in">
-          <div class="project-image">
-             <img src="AI-Interviewer.jpg" alt="AI-Interviewer" />
+             <img src="AI-Interviewer.jpg" alt="AI Interview Preparation Tool" loading="lazy" />
           </div>
           <div class="project-info">
             <h3 class="project-title">AI Interviewer</h3>
             <p class="project-desc">
-               Java Swing desktop app for bank account and transaction management with secure staff login.</p>
+              An intelligent interview preparation tool powered by OpenAI's GPT models. 
+              Conducts realistic technical interviews with real-time feedback and analysis. 
+              Learned to integrate AI APIs and build interactive web interfaces.
+            </p>
             <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
               <span class="tag">Python</span>
-              <span class="tag">API</span>
+              <span class="tag">OpenAI API</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">JavaScript</span>
             </div>
             <div class="project-buttons">
-              <a href="#" class="btn btn-primary">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="#" class="btn btn-secondary">
-                <i class="fab fa-github"></i> Code
+              <a href="https://github.com/AhmedAbdullah001/AI-Interviewer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fab fa-github"></i> View Code
               </a>
             </div>
           </div>
         </div>
 
         <div class="project-card fade-in">
-  <div class="project-image">
-    <div class="project-placeholder">
-      <i class="fas fa-code"></i>
-      <p>Coming Soon</p>
-    </div>
-  </div>
-  <div class="project-info">
-    <h3 class="project-title">Next Project</h3>
-    <p class="project-desc">
-      Something awesome is coming. Stay tuned for
-      the next project in my learning journey!
-    </p>
-    <div class="project-tags">
-      <span class="tag">Python</span>
-    </div>
-    <div class="project-buttons">
-      <a href="#" class="btn btn-primary">
-        <i class="fas fa-external-link-alt"></i> Live Demo
-      </a>
-      <a href="#" class="btn btn-secondary">
-        <i class="fab fa-github"></i> Code
-      </a>
-    </div>
-  </div>
-</div>
+          <div class="project-image">
+             <img src="Bank.png" alt="Bank Management System" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Bank Management System</h3>
+            <p class="project-desc">
+              A comprehensive banking application built with Java Swing that handles account 
+              management, transactions, and secure staff authentication. Solved the challenge 
+              of managing complex state and ensuring data persistence. Strengthened my OOP skills.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Swing GUI</span>
+              <span class="tag">OOP</span>
+              <span class="tag">File I/O</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/AhmedAbdullah001" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <img src="task-manager.png" alt="Task Manager Application" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Task Manager App</h3>
+            <p class="project-desc">
+              A productivity tool with drag-and-drop task organization, priority levels, and 
+              dark mode support. Tackled the challenge of implementing persistent local storage 
+              and smooth UI interactions. Great practice for vanilla JavaScript DOM manipulation.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">LocalStorage</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/AhmedAbdullah001" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <img src="weather-app.png" alt="Weather Forecast Application" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Weather Forecast App</h3>
+            <p class="project-desc">
+              Real-time weather application integrating OpenWeatherMap API with 5-day forecasts 
+              and geolocation features. Learned asynchronous JavaScript, API integration, and 
+              handling real-world data inconsistencies.
+            </p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Geolocation</span>
+              <span class="tag">Responsive</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/AhmedAbdullah001" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coming Soon Projects -->
+        <div class="project-card project-coming-soon fade-in">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <i class="fas fa-brain"></i>
+              <p>Coming Soon</p>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">AI Code Assistant</h3>
+            <p class="project-desc">
+              An intelligent code completion and debugging assistant powered by machine learning. 
+              Will help developers write better code with real-time suggestions and error detection.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">NLP</span>
+            </div>
+            <div class="project-status">
+              <i class="fas fa-clock"></i> In Development
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card project-coming-soon fade-in">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <i class="fas fa-graduation-cap"></i>
+              <p>Coming Soon</p>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">CampusHub</h3>
+            <p class="project-desc">
+              A comprehensive university management platform connecting students, faculty, and 
+              administration. Features include course management, attendance tracking, and real-time notifications.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <div class="project-status">
+              <i class="fas fa-clock"></i> Planned
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card project-coming-soon fade-in">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <i class="fas fa-shopping-cart"></i>
+              <p>Coming Soon</p>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <p class="project-desc">
+              A full-stack online marketplace with payment integration, product management, 
+              and user authentication. Building this to master modern web development practices.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Stripe API</span>
+            </div>
+            <div class="project-status">
+              <i class="fas fa-clock"></i> Planned
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card project-coming-soon fade-in">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <i class="fas fa-chart-line"></i>
+              <p>Coming Soon</p>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Data Analytics Dashboard</h3>
+            <p class="project-desc">
+              An interactive dashboard for visualizing complex datasets with real-time updates. 
+              Will showcase data science skills and modern visualization techniques.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">D3.js</span>
+            </div>
+            <div class="project-status">
+              <i class="fas fa-clock"></i> In Research
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -376,18 +368,13 @@
         <div class="contact-left">
           <h3 class="contact-heading">Let's talk about everything!</h3>
           <p class="contact-text">
-            Don't like forms? Send me an email or reach out
-            on social media. I'm always happy to discuss new
-            projects, creative ideas, or opportunities.
+            I'm always interested in hearing about new projects, collaboration 
+            opportunities, or just connecting with fellow developers and creators.
           </p>
           <div class="contact-info-list">
             <div class="contact-info-item">
               <i class="fas fa-envelope"></i>
-              <span>AhmedAbdullah392392@gmail.com</span>
-            </div>
-            <div class="contact-info-item">
-              <i class="fas fa-phone"></i>
-              <span>+92 3288637922</span>
+              <a href="mailto:AhmedAbdullah392392@gmail.com">AhmedAbdullah392392@gmail.com</a>
             </div>
             <div class="contact-info-item">
               <i class="fas fa-map-marker-alt"></i>
@@ -395,21 +382,27 @@
             </div>
           </div>
           <div class="contact-socials">
-            <p class="follow-text">Follow Me</p>
+            <p class="follow-text">Connect With Me</p>
             <div class="social-links">
-               <a href="https://github.com/yourusername"
+               <a href="https://github.com/AhmedAbdullah001"
                 target="_blank"
-                class="social-icon">
+                rel="noopener noreferrer"
+                class="social-icon"
+                aria-label="GitHub Profile">
                 <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/yourusername"
+                <a href="https://www.linkedin.com/in/ahmed-abdullah-0693612bb"
                 target="_blank"
-                class="social-icon">
+                rel="noopener noreferrer"
+                class="social-icon"
+                aria-label="LinkedIn Profile">
                 <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://instagram.com/amd_abdullah_06"
                 target="_blank"
-                class="social-icon">
+                rel="noopener noreferrer"
+                class="social-icon"
+                aria-label="Instagram Profile">
                 <i class="fab fa-instagram"></i>
                 </a>
               </div>
@@ -417,12 +410,25 @@
         </div>
 
         <div class="contact-right">
-          <input type="text" class="contact-input" placeholder="Your Name" />
-          <input type="email" class="contact-input" placeholder="Your Email" />
-          <textarea class="contact-input contact-textarea" placeholder="Your Message"></textarea>
-          <button class="btn btn-primary btn-full">
-            Send Message <i class="fas fa-paper-plane"></i>
-          </button>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+            <label for="contact-name" class="sr-only">Your Name</label>
+            <input type="text" id="contact-name" name="name" class="contact-input" placeholder="Your Name" required />
+            
+            <label for="contact-email" class="sr-only">Your Email</label>
+            <input type="email" id="contact-email" name="email" class="contact-input" placeholder="Your Email" required />
+            
+            <label for="contact-message" class="sr-only">Your Message</label>
+            <textarea id="contact-message" name="message" class="contact-input contact-textarea" placeholder="Your Message" required></textarea>
+            
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+          <p class="form-note">
+            <small>To enable this form, replace YOUR_FORM_ID in the HTML with your Formspree form ID, 
+            or use <a href="https://web3forms.com/" target="_blank" rel="noopener">Web3Forms</a> / 
+            <a href="https://www.emailjs.com/" target="_blank" rel="noopener">EmailJS</a>.</small>
+          </p>
         </div>
 
       </div>

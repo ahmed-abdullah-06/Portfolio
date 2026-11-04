@@ -33,6 +33,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
 }
 
 a {
@@ -218,6 +219,38 @@ section:first-of-type {
   background: var(--accent-glow);
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* ===========================
    HERO SECTION
    =========================== */
@@ -229,6 +262,7 @@ section:first-of-type {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+  scroll-margin-top: 60px;
 }
 
 .hero::before {
@@ -876,22 +910,45 @@ section:first-of-type {
 }
 
 /* ===========================
+   TABLET — 768px to 968px
+   =========================== */
+@media (max-width: 968px) and (min-width: 769px) {
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+}
+
+/* ===========================
    TABLET — 968px or less
    =========================== */
 @media (max-width: 968px) {
 
   section {
     padding: 60px 40px;
+    min-height: auto;
   }
 
   .navbar {
     padding: 0 40px;
+    height: 60px;
+  }
+
+  .nav-logo {
+    font-size: 18px;
+  }
+
+  .logo-icon {
+    font-size: 20px;
   }
 
   .hero {
     flex-direction: column;
     text-align: center;
     gap: 40px;
+    padding: 80px 40px 60px;
   }
 
   .hero-left {
@@ -903,9 +960,34 @@ section:first-of-type {
     font-size: 48px;
   }
 
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .hero-bio {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hero-socials {
+    justify-content: center;
+  }
+
   .photo-circle {
     width: 320px;
     height: 320px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
   }
 
   .about-content {
@@ -913,8 +995,21 @@ section:first-of-type {
     gap: 40px;
   }
 
+  .about-heading {
+    font-size: 24px;
+  }
+
+  .about-bio {
+    font-size: 15px;
+  }
+
+  .education-card {
+    flex-direction: row;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .contact-wrapper {
@@ -922,50 +1017,36 @@ section:first-of-type {
     gap: 40px;
   }
 
+  .contact-heading {
+    font-size: 22px;
+  }
+
 }
 
 /* ===========================
-   MOBILE — 600px or less
+   SMALL TABLET — 768px or less
    =========================== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
   section {
-    padding: 40px 20px;
+    padding: 50px 30px;
+  }
+
+  .hero {
+    padding: 70px 30px 50px;
   }
 
   .navbar {
-    padding: 0 20px;
-  }
-
-  .nav-links {
-    gap: 4px;
-  }
-
-  .nav-links a {
-    font-size: 13px;
-    padding: 4px 10px;
+    padding: 0 30px;
   }
 
   .hero-name {
-    font-size: 38px;
-  }
-
-  .hero-title {
-    font-size: 18px;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
+    font-size: 42px;
   }
 
   .photo-circle {
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
   }
 
   .section-title {
@@ -976,12 +1057,329 @@ section:first-of-type {
     grid-template-columns: 1fr;
   }
 
+}
+
+/* ===========================
+   MOBILE — 600px or less
+   =========================== */
+@media (max-width: 600px) {
+
+  section {
+    padding: 50px 20px;
+    min-height: auto;
+  }
+
+  .navbar {
+    padding: 0 16px;
+    height: 55px;
+  }
+
+  .nav-logo {
+    font-size: 16px;
+  }
+
+  .logo-icon {
+    font-size: 18px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 55px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 55px);
+    background: rgba(10, 10, 15, 0.98);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    gap: 0;
+    transition: left 0.3s ease;
+    border-top: 1px solid var(--border);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 16px 24px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+
+  .hero {
+    padding: 70px 20px 50px;
+  }
+
+  .hero-greeting {
+    font-size: 16px;
+  }
+
+  .hero-name {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .hero-title {
+    font-size: 18px;
+  }
+
+  .hero-bio {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    padding: 14px 24px;
+  }
+
+  .hero-socials {
+    justify-content: center;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .photo-circle {
+    width: 240px;
+    height: 240px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-title::after {
+    width: 40px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .about-heading {
+    font-size: 22px;
+  }
+
+  .about-bio {
+    font-size: 14px;
+  }
+
+  .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .education-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .education-info h4 {
+    font-size: 16px;
+  }
+
+  .education-info p {
+    font-size: 13px;
+  }
+
+  .skill-group {
+    padding: 20px;
+  }
+
+  .skill-group-title {
+    font-size: 15px;
+  }
+
+  .skill-chip {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    border-radius: 12px;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .project-info {
+    padding: 20px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .project-desc {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .project-tags {
+    gap: 6px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
   .project-buttons {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-buttons .btn {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .project-status {
+    padding: 10px 16px;
+    font-size: 13px;
   }
 
   .contact-wrapper {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-heading {
+    font-size: 20px;
+  }
+
+  .contact-text {
+    font-size: 14px;
+  }
+
+  .contact-info-item {
+    padding: 14px 16px;
+    font-size: 13px;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .contact-info-item i {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .follow-text {
+    font-size: 14px;
+  }
+
+  .contact-input {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .contact-textarea {
+    height: 140px;
+  }
+
+  .btn-full {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+
+  .form-note {
+    font-size: 12px;
+  }
+
+  .footer {
+    padding: 16px 20px;
+    font-size: 13px;
+  }
+
+}
+
+/* ===========================
+   EXTRA SMALL MOBILE — 400px or less
+   =========================== */
+@media (max-width: 400px) {
+
+  .hero-name {
+    font-size: 32px;
+  }
+
+  .hero-title {
+    font-size: 16px;
+  }
+
+  .photo-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  .project-image {
+    height: 160px;
+  }
+
+  .project-placeholder i {
+    font-size: 36px;
+  }
+
+  .project-placeholder p {
+    font-size: 13px;
   }
 
 }

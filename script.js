@@ -6,6 +6,19 @@ console.log("Portfolio Connected");
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 const fadeElements = document.querySelectorAll('.fade-in');
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navLinksContainer = document.querySelector('.nav-links');
+
+// ===========================
+// MOBILE MENU TOGGLE
+// ===========================
+if (mobileMenuToggle) {
+  mobileMenuToggle.addEventListener('click', function() {
+    this.classList.toggle('active');
+    navLinksContainer.classList.toggle('active');
+    document.body.style.overflow = navLinksContainer.classList.contains('active') ? 'hidden' : '';
+  });
+}
 
 // ===========================
 // SMOOTH SCROLL WITH ACTIVE LINK
@@ -21,8 +34,26 @@ navLinks.forEach(function(link) {
         behavior: 'smooth',
         block: 'start'
       });
+      
+      // Close mobile menu after clicking
+      if (mobileMenuToggle && navLinksContainer.classList.contains('active')) {
+        mobileMenuToggle.classList.remove('active');
+        navLinksContainer.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     }
   });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(e) {
+  if (mobileMenuToggle && 
+      !e.target.closest('.navbar') && 
+      navLinksContainer.classList.contains('active')) {
+    mobileMenuToggle.classList.remove('active');
+    navLinksContainer.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 });
 
 // ===========================
